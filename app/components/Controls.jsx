@@ -17,9 +17,9 @@ var Controls = React.createClass({
             }
         }
         return(
-            <div>
+            <div className="expanded button-group">
                 {renderStartStopButton()}
-                <button className="button alert hollow" onClick={this.onStatusChange('stopped')}>Clear</button>
+                <button className="button alert" onClick={this.onStatusChange('stopped')}>Clear</button>
             </div> 
         )
     }
