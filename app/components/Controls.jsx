@@ -8,11 +8,11 @@ var Controls = React.createClass({
         }
     },
     render: function(){
-        var{countdownStatus} = this.props;
+        var{countStatus} = this.props;
         var renderStartStopButton = ()=>{
-            if(countdownStatus === 'started'){
+            if(countStatus === 'started'){
                 return <button className="button secondary" onClick={this.onStatusChange('paused')}>Pause</button>
-            }else if(countdownStatus === 'paused'){
+            }else if(countStatus === 'paused' ){
                 return <button className="button primary"onClick={this.onStatusChange('started')}>Start</button>
             }
         }
@@ -25,7 +25,7 @@ var Controls = React.createClass({
     }
 })
 Controls.Proptypes = {
-        countdownStatus: Proptypes.string.isRequired,
+        countStatus: Proptypes.string.isRequired,
         onStatusChange: Proptypes.func.isRequired
 }
 module.exports = Controls;
